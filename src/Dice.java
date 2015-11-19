@@ -25,7 +25,7 @@ public class Dice {
 	
 	
 	
-	public Dice(int dices)
+	public Dice(int dices)//constructor with parameter
 	{
 		this.dices= dices;
 		for(int i=0; i<dices;i++)
@@ -44,15 +44,18 @@ public class Dice {
 	
 	public void FindRange()
 	{
-		if(ok>=4 && ok<=6){
+		if(ok>=1 && ok<=3){
 			
 			
 			word="Number falls between 1-3";}
 		
-		else if(ok>=3 && ok<=9 )
+		else if(ok>=4 && ok<=6 )
 				
-			word="Number is between 3-6";
+			word="Number is between 4-6";
 			
+		else if(ok>=4 && ok<=6 )
+			
+			word="Number is between 4-6";
 			
 		}
 	

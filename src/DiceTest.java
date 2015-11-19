@@ -13,7 +13,7 @@ public class DiceTest {
 	
 		
 		
-		int quit=0;
+		int quit=0;//player decides when to quit
 		
 		while(quit ==0){
 			
@@ -31,8 +31,10 @@ public class DiceTest {
 		System.out.println("1 for LOW RAnge or 2 for High RAnge???");
 		
 		
-		int range = input.nextInt(); 
+		int range = input.nextInt(); //players takes a guess
 	
+		
+		
 		DiceGame.FindRange();
 		
 		
@@ -43,14 +45,15 @@ public class DiceTest {
 		
 		playtime++;
 		
+	//int
 		System.out.println("To play press 0 or 1 to quit");
 		quit=input.nextInt();
 		
 		
 
 	}
-		System.out.printf("\nthe total numbers of time played was %d", playtime);
-		System.out.printf("\nthe total points collected", playtime);
+		System.out.printf("\nthe total numbers of time played was %d", playtime);//number of times played
+		System.out.printf("\nthe total points collected", playtime);//number points won
 	
 	
 	
