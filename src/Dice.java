@@ -16,23 +16,27 @@ public class Dice {
 		return randomNumber;
 	}
 	
-	
 	public Dice()//default contructor
 	{
-		this.roll();
-		
+		this.roll();	
 	}
 	
 	
 	
-	public Dice(int dices)//constructor with parameter
+	
+	public Dice(int dices)//constructor with parameter to determine numbers rolled
 	{
 		this.dices= dices;
+		if(dices <=0)
+		{
+			throw new IllegalArgumentException("Pick a number 0<x");//validate
+		}
 		for(int i=0; i<dices;i++)
 		{
 		ok+=this.roll();
 		
 		}
+		
 	
 	}
 	
@@ -42,27 +46,24 @@ public class Dice {
 	}
 	
 	
-	public void FindRange()
+	public String FindRange()
 	{
-		if(ok>=1 && ok<=3){
-			
-			
-			word="Number falls between 1-3";}
+		if(ok<=(3*dices))//determines the range 
+		{
+
+			return word="L";// word="LOW range Number!
+		}
 		
-		else if(ok>=4 && ok<=6 )
-				
-			word="Number is between 4-6";
-			
-		else if(ok>=4 && ok<=6 )
-			
-			word="Number is between 4-6";
+			else 
+				return word="H";// word="HIGH range Number!
 			
 		}
 	
-	public String getWord()
+	/*public String getRange()
 	{
 		return word;
-	}
+	} 
+	*/
 		
 	}
 	
