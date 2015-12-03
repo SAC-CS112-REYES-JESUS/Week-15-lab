@@ -30,6 +30,7 @@ public class Dice {
 		if(dices <=0)
 		{
 			throw new IllegalArgumentException("Pick a number 0<x");//validate
+			
 		}
 		for(int i=0; i<dices;i++)
 		{

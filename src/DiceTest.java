@@ -23,14 +23,15 @@ public class DiceTest {
 		while(quit ==0)
 	{
 			
-		
-		
+			boolean countingLoop = true;
+		do{
+			try{
 		System.out.println("Okay select the number of dice to roll");
 		int dicenNumber=input.nextInt();
-		
+			countingLoop = false;
 		Dice DiceGame= new Dice(dicenNumber);//Q2 DiceGame is the new object that is being instantiated form Dice class
 		
-	
+		
 		System.out.printf("DBG--DICE:: %d\n",DiceGame.getDice());//Q5 (debug)
 		//ranges are outputed
 		
@@ -78,8 +79,15 @@ public class DiceTest {
 
 		System.out.println("To Continue to play press 0 or 1 to quit");
 		quit=input.nextInt();
+			}
 		
-		
+		catch(Exception error)
+		{
+			System.out.printf("Sorry not valid number needs to #:\n");
+			input.nextLine();
+			
+		}
+		}while(countingLoop);
 
 	}
 		
