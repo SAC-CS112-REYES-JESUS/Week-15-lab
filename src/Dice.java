@@ -29,7 +29,7 @@ public class Dice {
 		this.dices= dices;
 		if(dices <=0)
 		{
-			throw new IllegalArgumentException("Pick a number 0<x");//validate
+			throw new IllegalArgumentException("Pick a number X>0");//validate
 			
 		}
 		for(int i=0; i<dices;i++)

@@ -83,7 +83,7 @@ public class DiceTest {
 		
 		catch(Exception error)
 		{
-			System.out.printf("Sorry not valid number needs to #:\n");
+			System.out.printf("Sorry not valid number needs to #:%s\n",error);
 			input.nextLine();
 			
 		}
